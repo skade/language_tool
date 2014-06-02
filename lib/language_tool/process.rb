@@ -26,7 +26,7 @@ module LanguageTool
     def start!
       @started = true
       Dir.chdir(self.path) do
-        @process = IO.popen("java -jar languagetool-commandline.jar --api -l en-GB -m de-DE -b -", "r+")
+        @process = IO.popen("java -jar languagetool-commandline.jar --api -l en-GB -m de-DE -", "r+")
       end
     end
 
@@ -41,9 +41,9 @@ module LanguageTool
     end
 
     def feed(text)
-      text << "\n" if text[-1,1] != "\n"
-      buf = ""
+      text << "\n\n" if text[-2,2] != "\n\n"
       @process.write(text)
+      buf = ""
       while line = @process.readline do
         buf << line
         break if line == "</matches>\n"

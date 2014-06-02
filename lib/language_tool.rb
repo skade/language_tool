@@ -1,3 +1,4 @@
+require "language_tool/jars"
 require "language_tool/version"
 require "language_tool/process"
 require "language_tool/error_parser"
