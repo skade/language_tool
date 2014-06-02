@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = LanguageTool::VERSION
   spec.authors       = ["Florian Gilcher"]
   spec.email         = ["florian.gilcher@asquera.de"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{A simple interface to LanguageTool}
+  spec.summary       = %q{A currently very minimal and thus simple interface to LanguageTool}
   spec.homepage      = ""
   spec.license       = "MIT"
 
